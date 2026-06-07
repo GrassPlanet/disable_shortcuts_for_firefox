@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Disable Shortcuts for Firefox</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>Disable Shortcuts for Firefox</h1>
+    <p class="hint">
+      Adding a site prevents that website from handling keyboard shortcuts. Reload the
+      site after adding / removing from this list.
+    </p>
+
+    <label for="site-input">Add a site to disable shortcuts</label>
+    <div class="row">
+      <input id="site-input" type="text" placeholder="discord.com" />
+      <button id="add-site-button" type="button">Add</button>
+    </div>
+    <p id="form-error" class="error" hidden></p>
+
+    <h2 class="list-heading">Sites with shortcuts disabled</h2>
+    <ul id="site-list"></ul>
+    <p id="empty-state" class="empty" hidden>No sites yet.</p>
+
+    <script src="../lib/disabled-sites.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
